@@ -9,4 +9,9 @@ build:
         name: build
         code: |
           /bin/bash -ex gfbuild.sh build_re_dev 2>&1
-
+  ql_gf_full_profile_all:
+    steps:
+      - script:
+        name: "GlassFish quicklook full profile"
+        code: |
+          bash -ex appserver/tests/gftest.sh run_test ql_gf_full_profile_all
