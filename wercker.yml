@@ -11,7 +11,7 @@ ql_gf_full_profile_all:
     - script:
         name: "GlassFish quicklook full profile"
         code: |
-          bash -ex appserver/tests/gftest.sh run_test ql_gf_full_profile_all 2>&1
+          bash -ex appserver/tests/gftest.sh run_test ql_gf_full_profile_all
 jdbc_all:
   steps:
     - script:
