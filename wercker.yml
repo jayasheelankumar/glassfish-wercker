@@ -15,6 +15,6 @@ ql_gf_full_profile_all:
 jdbc_all:
   steps:
     - script:
-	name: "GlassFish jdbc tests"
-	code: |
-	  bash -ex appserver/tests/gftest.sh run_test jdbc_all
+        name: "GlassFish jdbc tests"
+        code: |
+          bash -ex appserver/tests/gftest.sh run_test jdbc_all
