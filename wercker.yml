@@ -1,23 +1,20 @@
 box: arindamb/glassfish-ci-images
 no-response-timeout: 15
 build:
-    # Steps make up the actions in your pipeline
-    # Read more about steps on our dev center:
-    # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     - script:
         name: build
         code: |
           /bin/bash -ex gfbuild.sh build_re_dev 2>&1
 ql_gf_full_profile_all:
-    steps:
-      - script:
+  steps:
+    - script:
         name: "GlassFish quicklook full profile"
         code: |
           bash -ex appserver/tests/gftest.sh run_test ql_gf_full_profile_all
 jdbc_all:
-    steps:
-      - script:
+  steps:
+    - script:
 	name: "GlassFish jdbc tests"
 	code: |
 	  bash -ex appserver/tests/gftest.sh run_test jdbc_all
